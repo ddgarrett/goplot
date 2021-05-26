@@ -12,10 +12,7 @@ import (
 func main() {
 	rand.Seed(int64(0))
 
-	p, err := plot.New()
-	if err != nil {
-		panic(err)
-	}
+	p := plot.New()
 
 	p.Title.Text = "Relabeling tick marks example"
 	p.X.Label.Text = "X"
@@ -24,7 +21,7 @@ func main() {
 	// that computes the default tick marks and re-labels the major ticks with commas.
 	p.Y.Tick.Marker = commaTicks{}
 
-	err = plotutil.AddLinePoints(p,
+	err := plotutil.AddLinePoints(p,
 		"First", randomPoints(15),
 		"Second", randomPoints(15),
 		"Third", randomPoints(15))
