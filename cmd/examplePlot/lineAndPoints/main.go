@@ -18,7 +18,7 @@ func main() {
 	p.X.Label.Text = "X"
 	p.Y.Label.Text = "Y"
 
-	err = plotutil.AddLinePoints(p,
+	err := plotutil.AddLinePoints(p,
 		"First", randomPoints(15),
 		"Second", randomPoints(15),
 		"Third", randomPoints(15))
